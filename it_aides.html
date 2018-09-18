@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>it_aides.utf8.md</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.2.1/htmlwidgets.js"></script>
+<script src="site_libs/proj4js-2.3.15/proj4.js"></script>
+<link href="site_libs/highcharts-5.0.6/css/motion.css" rel="stylesheet" />
+<script src="site_libs/highcharts-5.0.6/highstock.js"></script>
+<script src="site_libs/highcharts-5.0.6/highcharts-3d.js"></script>
+<script src="site_libs/highcharts-5.0.6/highcharts-more.js"></script>
+<script src="site_libs/highcharts-5.0.6/modules/annotations.js"></script>
+<script src="site_libs/highcharts-5.0.6/modules/broken-axis.js"></script>
+<script src="site_libs/highcharts-5.0.6/modules/data.js"></script>
+<script src="site_libs/highcharts-5.0.6/modules/drilldown.js"></script>
+<script src="site_libs/highcharts-5.0.6/modules/exporting.js"></script>
+<script src="site_libs/highcharts-5.0.6/modules/funnel.js"></script>
+<script src="site_libs/highcharts-5.0.6/modules/heatmap.js"></script>
+<script src="site_libs/highcharts-5.0.6/modules/map.js"></script>
+<script src="site_libs/highcharts-5.0.6/modules/no-data-to-display.js"></script>
+<script src="site_libs/highcharts-5.0.6/modules/offline-exporting.js"></script>
+<script src="site_libs/highcharts-5.0.6/modules/solid-gauge.js"></script>
+<script src="site_libs/highcharts-5.0.6/modules/treemap.js"></script>
+<script src="site_libs/highcharts-5.0.6/plugins/annotations.js"></script>
+<script src="site_libs/highcharts-5.0.6/plugins/draggable-legend.js"></script>
+<script src="site_libs/highcharts-5.0.6/plugins/draggable-points.js"></script>
+<script src="site_libs/highcharts-5.0.6/plugins/export-csv.js"></script>
+<script src="site_libs/highcharts-5.0.6/plugins/grouped-categories.js"></script>
+<script src="site_libs/highcharts-5.0.6/plugins/motion.js"></script>
+<script src="site_libs/highcharts-5.0.6/plugins/pattern-fill-v2.js"></script>
+<script src="site_libs/highcharts-5.0.6/plugins/tooltip-delay.js"></script>
+<script src="site_libs/highcharts-5.0.6/custom/reset.js"></script>
+<script src="site_libs/highcharts-5.0.6/custom/symbols-extra.js"></script>
+<script src="site_libs/highcharts-5.0.6/custom/text-symbols.js"></script>
+<link href="site_libs/fontawesome-4.5.0/font-awesome.min.css" rel="stylesheet" />
+<link href="site_libs/htmlwdgtgrid-1/htmlwdgtgrid.css" rel="stylesheet" />
+<script src="site_libs/highchart-binding-0.5.0/highchart.js"></script>
+<script src="site_libs/datatables-binding-0.2/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.12/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.12/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/dt-ext-buttons-1.10.12/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="site_libs/dt-ext-buttons-1.10.12/js/dataTables.buttons.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.12/js/buttons.flash.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.12/js/buttons.html5.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.12/js/buttons.colVis.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.12/js/buttons.print.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="www\paper.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 64px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+
+.section h2 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h3 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h4 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h5 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+.section h6 {
+  padding-top: 69px;
+  margin-top: -69px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">IT Positions Analysis</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="index.html">Baseline</a>
+</li>
+<li>
+  <a href="hiring_cw.html">Hiring Trends</a>
+</li>
+<li>
+  <a href="it_aides.html">IT Aides</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<style type='text/css'>
+.main-container {
+  max-width: 1800px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+</style>
+<div id="it-aides" class="section level2">
+<h2>IT Aides</h2>
+<p>We believe that Information Technology (IT) Aide classification is a “launching point” for LA County careers in the technology field. This page provides an analysis of this position, as well as positions that “feed” into the IT Aide, often referred to as “feeder classes”. The analysis takes a look at incumbents and vacancies as of August 1, 2018 and hiring trends from the previous three (3) years (Aug 1 2015-Jul 31 2018).</p>
+<div id="what-is-the-number-of-vacant-it-aide-positions" class="section level4">
+<h4>What is the number of vacant IT Aide positions?</h4>
+<p>There are <strong>13 vacant</strong> IT Aide positions across the county, all of which are full-time permanent positions. In addition, there are currently <strong>54 currently filled positions</strong>. The overall vacancy rate is 19.4%.</p>
+</div>
+<div id="how-many-it-aides-do-we-hire-per-year" class="section level4">
+<h4>How many IT Aides do we hire per year?</h4>
+<div id="htmlwidget-3fbd28fd629a58bba168" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3fbd28fd629a58bba168">{"x":{"hc_opts":{"title":{"text":"Number of IT Aide Hires Per Year"},"yAxis":{"title":{"text":"Hires"},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"turboThreshold":0,"showInLegend":false,"marker":{"enabled":true}},"treemap":{"layoutAlgorithm":"squarified"},"bubble":{"minSize":5,"maxSize":25},"scatter":{"marker":{"symbol":"circle"}},"column":{"dataLabels":{"enabled":true}}},"annotationsOptions":{"enabledButtons":false},"tooltip":{"delayForDisplay":10},"series":[{"group":"group","data":[{"EFFECTIVE_DT":"Aug 2015-Jul 2016","Count":19,"y":19,"name":"Aug 2015-Jul 2016"},{"EFFECTIVE_DT":"Aug 2016-Jul 2017","Count":12,"y":12,"name":"Aug 2016-Jul 2017"},{"EFFECTIVE_DT":"Aug 2017-Jul 2018","Count":22,"y":22,"name":"Aug 2017-Jul 2018"}],"type":"column"}],"xAxis":{"type":"category","title":{"text":""}},"subtitle":{"text":"(Aug 2015 - Jul 2018)"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":[],"debug":false},"evals":[],"jsHooks":[]}</script>
+<p>The table above includes new hires, rehires, reinstatements, and promotions. <strong>64.2% of all IT Aide hires</strong> are from internal candidates. This represents 34 internal hires from the last three years.</p>
+</div>
+<div id="what-classes-feed-into-it-aide" class="section level4">
+<h4>What classes feed into IT Aide?</h4>
+<p>The table below shows the classifications that feed into IT Aide and the count of employees that came from each of these positions in the last three years. The turquoise bar indicates the percentage of female employees currently in that classification (i.e., the larger the bar, the more females are represented in that class).</p>
+<div id="htmlwidget-d68bbf7da01761e9a785" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d68bbf7da01761e9a785">{"x":{"filter":"none","extensions":["Buttons"],"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],["1138","2216","2214","1140","2329","2482","8263","9179","2219","2331","2672","5090","8103","8250","9192"],["INTERMEDIATE CLERK","SENIOR TYPIST-CLERK","INTERMEDIATE TYPIST-CLERK","SENIOR CLERK","WAREHOUSE WORKER AID","STUDENT PROF WORKER, INFO TECH","VETERAN INTERN, INFO TECH SUPPORT","ELIGIBILITY WORKER II","SUPERVISING TYPIST-CLERK","WAREHOUSE WORKER I","DATA CONVERSION EQUIPMENT OPR I","CLINIC LICENSED VOCATIONAL NURSE I","COMMUNITY WORKER","CAREER DEVELOPMENT INTERN","PATIENT RESOURCES WORKER"],[6,6,5,2,2,2,2,2,1,1,1,1,1,1,1],[77.6,86.6,86.45,82.14,14.63,19.05,20,79.66,88.06,6.19,72.73,82.83,78.74,81.58,82.34]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Title Code<\/th>\n      <th>Title Name<\/th>\n      <th>Hired into IT Aide<\/th>\n      <th>Percent Female Currently Holding Item<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"columnDefs":[{"className":"dt-right","targets":[3,4]},{"orderable":false,"targets":0}],"order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[4]; if (value!==null) $(this.api().cell(row, 4).node()).css({'background':isNaN(parseFloat(value)) || value <= 6.19 ? '' : 'linear-gradient(90deg, transparent ' + (88.06 - value)/81.87 * 100 + '%, turquoise ' + (88.06 - value)/81.87 * 100 + '%)','background-size':'100% 90%','background-repeat':'no-repeat','background-position':'center'});\n}"},"selection":{"mode":"multiple","selected":null,"target":"row"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
